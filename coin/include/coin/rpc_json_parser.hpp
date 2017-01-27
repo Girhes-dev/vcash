@@ -25,7 +25,11 @@
 #include <string>
 
 #include <boost/property_tree/ptree.hpp>
+#if BOOST_VERSION > 105800
+#include <boost/property_tree/detail/json_parser/read.hpp>
+#else
 #include <boost/property_tree/detail/json_parser_read.hpp>
+#endif
 #include <boost/property_tree/detail/json_parser_write.hpp>
 #include <boost/property_tree/detail/json_parser_error.hpp>
 
